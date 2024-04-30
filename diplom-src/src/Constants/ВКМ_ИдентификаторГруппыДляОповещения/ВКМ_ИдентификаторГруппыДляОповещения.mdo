@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Constant xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="dd7557c2-d785-4248-8504-b52c70a6f59f">
+  <producedTypes>
+    <managerType typeId="6edf7316-d25e-4fea-a292-038b47d8d195" valueTypeId="1a956908-35f1-4ab6-9982-7dbd12c9de25"/>
+    <valueManagerType typeId="17da585d-64a9-4a85-88cd-9815aa5148b6" valueTypeId="fecea5d4-e4e6-4746-94ce-b75a2ea6471a"/>
+    <valueKeyType typeId="5f6f3e9d-54c6-4e21-b352-c71ee3fc6f47" valueTypeId="48b37a11-9614-4728-887f-9ff296fd5ea2"/>
+  </producedTypes>
+  <name>ВКМ_ИдентификаторГруппыДляОповещения</name>
+  <synonym>
+    <key>ru</key>
+    <value>Идентификатор группы для оповещения</value>
+  </synonym>
+  <type>
+    <types>Number</types>
+    <numberQualifiers>
+      <precision>25</precision>
+    </numberQualifiers>
+  </type>
+  <useStandardCommands>true</useStandardCommands>
+  <format>
+    <key>ru</key>
+    <value>ЧЦ=25; ЧГ=</value>
+  </format>
+  <editFormat>
+    <key>ru</key>
+    <value>ЧЦ=25; ЧГ=</value>
+  </editFormat>
+  <minValue xsi:type="core:UndefinedValue"/>
+  <maxValue xsi:type="core:UndefinedValue"/>
+  <dataLockControlMode>Managed</dataLockControlMode>
+</mdclass:Constant>
