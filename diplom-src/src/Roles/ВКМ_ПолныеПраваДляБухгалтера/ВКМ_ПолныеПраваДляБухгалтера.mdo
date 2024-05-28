@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Role xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="db5c35a2-515d-4fe8-aa01-56750332aad9">
+  <name>ВКМ_ПолныеПраваДляБухгалтера</name>
+  <synonym>
+    <key>ru</key>
+    <value>ВКМ полные права для бухгалтера</value>
+  </synonym>
+</mdclass:Role>

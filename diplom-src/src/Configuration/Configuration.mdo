@@ -573,6 +573,8 @@
   <roles>Role.ЧтениеНСИ</roles>
   <roles>Role.ЧтениеУчетныхЗаписейЭлектроннойПочты</roles>
   <roles>Role.ВКМ_РаботаСДокументомОбслуживаниеКлиента</roles>
+  <roles>Role.ВКМ_МассовоеСозданиеРеализации</roles>
+  <roles>Role.ВКМ_ПолныеПраваДляБухгалтера</roles>
   <commonTemplates>CommonTemplate.ДанныеПечатиОбщиеРеквизиты</commonTemplates>
   <commonTemplates>CommonTemplate.ДанныеПечатиРегистрСимволов</commonTemplates>
   <commonTemplates>CommonTemplate.ИнструкцияПоСозданиюФаксимильнойПодписиИПечати</commonTemplates>
