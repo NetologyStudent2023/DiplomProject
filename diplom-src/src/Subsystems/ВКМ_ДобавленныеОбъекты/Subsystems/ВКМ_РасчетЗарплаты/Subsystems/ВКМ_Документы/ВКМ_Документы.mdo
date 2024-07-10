@@ -10,5 +10,6 @@
   <content>Document.ВКМ_НачислениеЗарплаты</content>
   <content>Document.ВКМ_НачислениеФиксированнойПремии</content>
   <content>Document.ВКМ_ВыплатаЗарплаты</content>
+  <content>Document.ВКМ_ГрафикОтпусков</content>
   <parentSubsystem>Subsystem.ВКМ_ДобавленныеОбъекты.Subsystem.ВКМ_РасчетЗарплаты</parentSubsystem>
 </mdclass:Subsystem>
