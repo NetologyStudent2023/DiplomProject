@@ -575,6 +575,7 @@
   <roles>Role.ВКМ_РаботаСДокументомОбслуживаниеКлиента</roles>
   <roles>Role.ВКМ_МассовоеСозданиеРеализации</roles>
   <roles>Role.ВКМ_ПолныеПраваДляБухгалтера</roles>
+  <roles>Role.ВКМ_НачисленияВыплатыОтпуск</roles>
   <commonTemplates>CommonTemplate.ДанныеПечатиОбщиеРеквизиты</commonTemplates>
   <commonTemplates>CommonTemplate.ДанныеПечатиРегистрСимволов</commonTemplates>
   <commonTemplates>CommonTemplate.ИнструкцияПоСозданиюФаксимильнойПодписиИПечати</commonTemplates>
