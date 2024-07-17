@@ -12,6 +12,8 @@
   <content>Constant.ВКМ_НоменклатураРаботыСпециалиста</content>
   <content>Role.ВКМ_МассовоеСозданиеРеализации</content>
   <content>Role.ВКМ_ПолныеПраваДляБухгалтера</content>
+  <content>Report.ВКМ_ВыработкаСпециалистов</content>
+  <content>Report.ВКМ_АнализВыставленныхАктов</content>
   <subsystems>ВКМ_ОбслуживаниеКлиентов</subsystems>
   <subsystems>ВКМ_РасчетЗарплаты</subsystems>
 </mdclass:Subsystem>
