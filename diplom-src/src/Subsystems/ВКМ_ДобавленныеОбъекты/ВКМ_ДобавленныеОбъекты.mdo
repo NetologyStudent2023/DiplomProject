@@ -14,6 +14,8 @@
   <content>Role.ВКМ_ПолныеПраваДляБухгалтера</content>
   <content>Report.ВКМ_ВыработкаСпециалистов</content>
   <content>Report.ВКМ_АнализВыставленныхАктов</content>
+  <content>Report.ВКМ_РасчетыССотрудникми</content>
+  <content>Report.ВКМ_РасходЗапланированныхОтпусков</content>
   <subsystems>ВКМ_ОбслуживаниеКлиентов</subsystems>
   <subsystems>ВКМ_РасчетЗарплаты</subsystems>
 </mdclass:Subsystem>
