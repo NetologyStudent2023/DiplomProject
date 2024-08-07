@@ -8,6 +8,7 @@
   <includeHelpInContents>true</includeHelpInContents>
   <includeInCommandInterface>true</includeInCommandInterface>
   <content>Role.ВКМ_НачисленияВыплатыОтпуск</content>
+  <content>DataProcessor.ВКМ_ЗаполнениеГрафикаКалендаря</content>
   <subsystems>ВКМ_Документы</subsystems>
   <subsystems>ВКМ_Регистры</subsystems>
   <subsystems>ВКМ_ПланыВР</subsystems>
