@@ -164,7 +164,6 @@
     </type>
     <minValue xsi:type="core:UndefinedValue"/>
     <maxValue xsi:type="core:UndefinedValue"/>
-    <fillChecking>ShowError</fillChecking>
     <fillValue xsi:type="core:UndefinedValue"/>
     <fullTextSearch>Use</fullTextSearch>
     <dataHistory>Use</dataHistory>
@@ -415,7 +414,7 @@
     <name>ВКМ_ПечатьАкта</name>
     <synonym>
       <key>ru</key>
-      <value>Печать акта</value>
+      <value>Сформировать акт услуг</value>
     </synonym>
     <group>FormCommandBarImportant</group>
     <commandParameterType>
