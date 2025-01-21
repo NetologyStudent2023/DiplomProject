@@ -581,6 +581,8 @@
   <roles>Role.ВКМ_РаботаСОтчетомПоРасчетам</roles>
   <roles>Role.ВКМ_РаботаСОтчетомАВА</roles>
   <roles>Role.ВКМ_ПолныеПраваДляМенеджера</roles>
+  <roles>Role.ВКМ_ДОБухгалтер</roles>
+  <roles>Role.ВКМ_ДОСпециалист</roles>
   <commonTemplates>CommonTemplate.ДанныеПечатиОбщиеРеквизиты</commonTemplates>
   <commonTemplates>CommonTemplate.ДанныеПечатиРегистрСимволов</commonTemplates>
   <commonTemplates>CommonTemplate.ИнструкцияПоСозданиюФаксимильнойПодписиИПечати</commonTemplates>
