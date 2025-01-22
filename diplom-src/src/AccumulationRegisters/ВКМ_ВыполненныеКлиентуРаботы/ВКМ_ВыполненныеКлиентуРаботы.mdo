@@ -51,6 +51,22 @@
     <maxValue xsi:type="core:UndefinedValue"/>
     <fullTextSearch>Use</fullTextSearch>
   </resources>
+  <resources uuid="14345ea2-93d1-42b0-b19d-a1c3685d63d3">
+    <name>СуммаАП</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сумма АП</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
   <dimensions uuid="e678fb41-f836-4a51-bbe9-e88e6f336275">
     <name>Клиент</name>
     <synonym>
