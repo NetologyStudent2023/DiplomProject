@@ -31,6 +31,16 @@
 			</title>
 		</field>
 		<field xsi:type="DataSetFieldField">
+			<dataPath>АбонентскаяПлата</dataPath>
+			<field>АбонентскаяПлата</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Абонентская плата</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
 			<dataPath>Всего</dataPath>
 			<field>Всего</field>
 			<title xsi:type="v8:LocalStringType">
@@ -41,32 +51,86 @@
 			</title>
 		</field>
 		<field xsi:type="DataSetFieldField">
-			<dataPath>СуммаЗаРаботыКлиенту</dataPath>
-			<field>СуммаЗаРаботыКлиенту</field>
+			<dataPath>СуммаЗаказа</dataPath>
+			<field>СуммаЗаказа</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма заказа</v8:content>
+				</v8:item>
+			</title>
 		</field>
 		<field xsi:type="DataSetFieldField">
-			<dataPath>СуммаАП</dataPath>
-			<field>СуммаАП</field>
+			<dataPath>СуммаОплаты</dataPath>
+			<field>СуммаОплаты</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма оплаты</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаОтгрузки</dataPath>
+			<field>СуммаОтгрузки</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма отгрузки</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаКлиентуЗаРаботы</dataPath>
+			<field>СуммаКлиентуЗаРаботы</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма клиенту за работы</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Контрагент</dataPath>
+			<field>Контрагент</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Заказ</dataPath>
+			<field>Заказ</field>
 		</field>
 		<dataSource>ИсточникДанных1</dataSource>
 		<query>ВЫБРАТЬ
-	ВКМ_ВыполненныеКлиентуРаботы.Клиент КАК Клиент,
-	ВКМ_ВыполненныеКлиентуРаботы.Договор КАК Договор,
-	СУММА(ВКМ_ВыполненныеКлиентуРаботы.СуммаКОплате) КАК ЗаРаботы,
-	МАКСИМУМ(ВКМ_ВыполненныеКлиентуРаботы.СуммаАП) КАК СуммаАП,
-	СУММА(ВКМ_ВыполненныеКлиентуРаботы.СуммаКОплате) + МАКСИМУМ(ВКМ_ВыполненныеКлиентуРаботы.СуммаАП) КАК Всего,
-	МАКСИМУМ(ОбработкаЗаказов.ВКМ_СуммаЗаРаботы) КАК СуммаЗаРаботыКлиенту
+	ВКМ_ВыполненныеКлиентуРаботыОбороты.Клиент КАК Клиент,
+	ВКМ_ВыполненныеКлиентуРаботыОбороты.Договор КАК Договор,
+	ВКМ_ВыполненныеКлиентуРаботыОбороты.СуммаКОплатеОборот КАК ЗаРаботы,
+	ВКМ_ВыполненныеКлиентуРаботыОбороты.СуммаАПОборот КАК АбонентскаяПлата,
+	ВКМ_ВыполненныеКлиентуРаботыОбороты.СуммаКОплатеОборот + ВКМ_ВыполненныеКлиентуРаботыОбороты.СуммаАПОборот КАК Всего,
+	NULL КАК СуммаЗаказа,
+	NULL КАК СуммаОплаты,
+	NULL КАК СуммаОтгрузки,
+	NULL КАК СуммаКлиентуЗаРаботы
 ИЗ
-	РегистрНакопления.ВКМ_ВыполненныеКлиентуРаботы КАК ВКМ_ВыполненныеКлиентуРаботы
-		ЛЕВОЕ СОЕДИНЕНИЕ РегистрНакопления.ОбработкаЗаказов КАК ОбработкаЗаказов
-		ПО ВКМ_ВыполненныеКлиентуРаботы.Клиент = ОбработкаЗаказов.Контрагент
-		И ВКМ_ВыполненныеКлиентуРаботы.Договор = ОбработкаЗаказов.Договор
-ГДЕ
-	ВКМ_ВыполненныеКлиентуРаботы.Период МЕЖДУ &amp;НачалоПериода И &amp;КонецПериода
-	И ОбработкаЗаказов.Период МЕЖДУ &amp;НачалоПериода И &amp;КонецПериода
-СГРУППИРОВАТЬ ПО
-	ВКМ_ВыполненныеКлиентуРаботы.Клиент,
-	ВКМ_ВыполненныеКлиентуРаботы.Договор</query>
+	РегистрНакопления.ВКМ_ВыполненныеКлиентуРаботы.Обороты(&amp;НачалоПериода, &amp;КонецПериода,,) КАК
+		ВКМ_ВыполненныеКлиентуРаботыОбороты
+
+ОБЪЕДИНИТЬ
+
+ВЫБРАТЬ
+	ОбработкаЗаказовОбороты.Контрагент,
+	ОбработкаЗаказовОбороты.Договор,
+	NULL,
+	NULL,
+	NULL,
+	ОбработкаЗаказовОбороты.СуммаЗаказаОборот,
+	ОбработкаЗаказовОбороты.СуммаОплатыОборот,
+	ОбработкаЗаказовОбороты.СуммаОтгрузкиОборот,
+	ОбработкаЗаказовОбороты.ВКМ_СуммаЗаРаботыОборот
+ИЗ
+	РегистрНакопления.ОбработкаЗаказов.Обороты(&amp;НачалоПериода, &amp;КонецПериода,,) КАК ОбработкаЗаказовОбороты
+
+УПОРЯДОЧИТЬ ПО
+	Клиент,
+	Договор</query>
 	</dataSet>
 	<parameter>
 		<name>Период</name>
@@ -136,10 +200,22 @@
 					<dcsset:field>ЗаРаботы</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>АбонентскаяПлата</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
 					<dcsset:field>Всего</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:field>СуммаЗаРаботыКлиенту</dcsset:field>
+					<dcsset:field>СуммаЗаказа</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СуммаОплаты</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СуммаОтгрузки</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СуммаКлиентуЗаРаботы</dcsset:field>
 				</dcsset:item>
 			</dcsset:selection>
 			<dcsset:dataParameters>

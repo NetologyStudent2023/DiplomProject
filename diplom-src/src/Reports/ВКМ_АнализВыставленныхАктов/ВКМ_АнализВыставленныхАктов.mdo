@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<mdclass:Report xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="27b28237-f51e-4611-a5c5-b43289df5e9a">
+<mdclass:Report xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="6bfbe20e-b03e-4f05-9480-0466998b0753">
   <producedTypes>
-    <objectType typeId="772fbc8e-d698-49fb-8730-4040294c3fd2" valueTypeId="5de86d2c-c08c-4c56-86d4-2e1b744b985b"/>
-    <managerType typeId="35b0aef4-92e8-4b1e-97b8-1079ec6e0c88" valueTypeId="c7fdca23-6281-4b77-b3c8-6d549a829e03"/>
+    <objectType typeId="6bbb44e1-ebae-4570-9390-d7d7745966bd" valueTypeId="cc1968e7-3573-400f-b325-b955334b849f"/>
+    <managerType typeId="1cae68ff-5360-4d65-8dc2-1616238a810e" valueTypeId="6f36e5f6-3153-46d5-bfe8-7763cd115520"/>
   </producedTypes>
   <name>ВКМ_АнализВыставленныхАктов</name>
   <synonym>
     <key>ru</key>
-    <value>Анализ выставленных актов</value>
+    <value>АнализВыставленныхАктов</value>
   </synonym>
   <useStandardCommands>true</useStandardCommands>
   <mainDataCompositionSchema>Report.ВКМ_АнализВыставленныхАктов.Template.ОсновнаяСхемаКомпоновкиДанных</mainDataCompositionSchema>
-  <templates uuid="106327e3-61d3-46e1-a042-0bc3b752254f">
+  <templates uuid="dc4ef959-d65f-4df0-8910-cd91c514570c">
     <name>ОсновнаяСхемаКомпоновкиДанных</name>
     <synonym>
       <key>ru</key>
